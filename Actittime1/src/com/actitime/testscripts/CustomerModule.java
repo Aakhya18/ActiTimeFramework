@@ -63,15 +63,19 @@ public class CustomerModule extends BaseClass {
 		}
 	}
 
-	/*
-	 * @Test(dataProvider = "logInwrong") public static void
-	 * logInwrongcredential(String un, String pw) {
-	 * 
-	 * }
-	 * 
-	 * @DataProvider public Object[][] logInwrong() { Object[][] obj = new
-	 * Object[2][2]; obj[0][0] = "admin1"; obj[0][1] = "manager1"; obj[1][0] =
-	 * "admin2"; obj[1][1] = "manager2"; return obj; }
-	 */
+	@Test(dataProvider = "logInwrong")
+	public static void logInwrongcredential(String un, String pw) {
+
+	}
+
+	@DataProvider
+	public Object[][] logInwrong() {
+		Object[][] obj = new Object[2][2];
+		obj[0][0] = "admin1";
+		obj[0][1] = "manager1";
+		obj[1][0] = "admin2";
+		obj[1][1] = "manager2";
+		return obj;
+	}
 
 }
